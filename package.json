@@ -1,0 +1,12 @@
+{
+  "name": "checkout-suite",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}

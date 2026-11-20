@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Mini Checkout</h1>
+
+    <section aria-labelledby="products-h">
+      <h2 id="products-h">Products</h2>
+      <ul class="list">
+        <li>
+          <span>Wireless Mouse - ₹799.00</span>
+          <button type="button" data-testid="add-mouse" data-add="mouse">Add to cart</button>
+        </li>
+        <li>
+          <span>USB-C Cable - ₹249.50</span>
+          <button type="button" data-testid="add-cable" data-add="cable">Add to cart</button>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="cart-h">
+      <h2 id="cart-h">Your cart</h2>
+      <p data-testid="cart-empty">Your cart is empty.</p>
+      <ul class="list" id="cart-items" data-testid="cart-items"></ul>
+      <p class="total">Order total: <strong data-testid="order-total">₹0.00</strong></p>
+    </section>
+
+    <section aria-labelledby="checkout-h">
+      <h2 id="checkout-h">Checkout</h2>
+      <label for="name">Name (required)</label>
+      <input id="name" data-testid="name-input" type="text" autocomplete="off">
+      <p class="error" role="alert" data-testid="name-error" hidden></p>
+      <p class="error" role="alert" data-testid="cart-error" hidden></p>
+      <button type="button" data-testid="place-order">Place Order</button>
+    </section>
+
+    <section class="confirmation" data-testid="confirmation" hidden>
+      <h2>Order confirmed</h2>
+      <p>Thank you, <span data-testid="confirm-name"></span>!</p>
+      <p>Reference: <strong data-testid="order-reference"></strong></p>
+      <button type="button" data-testid="new-order">Start new order</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
